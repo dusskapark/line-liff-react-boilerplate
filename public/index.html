@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="https://static.line-scdn.net/laicon/edge/latest/laicon.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -29,6 +30,15 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!--
+      LIFF SDK v2. See https://developers.line.biz/en/docs/liff/overview/
+    -->
+    <!-- <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> -->
+    <script src="https://line-objects-internal.com/assets/liff/edge/2.1/sdk.js"></script>
+    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.0.0/luivendor.js"></script>
+    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.0.0/lui-navigation-bar.js"></script>
+    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.0.0/lui-navigation-bar-spacer.js"></script>
+    <script type="module" src="https://line-objects-internal.com/assets/lui/edge/versions/1.0.0/lui-navigation-back.js"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
