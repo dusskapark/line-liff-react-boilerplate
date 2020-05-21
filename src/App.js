@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Fragment>
       <Menu/>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/home' component={Home} />
       <Switch>
         <Route path='/about/:name' component={About} />
         <Route path='/about' component={About} />
