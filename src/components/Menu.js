@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 
+const liff = window.liff;
+
 const Menu = () => {
-  const liff = window.liff;
 
   const activeStyle = {
     color: "green",
@@ -34,12 +35,12 @@ const Menu = () => {
         <lui-navigation-bar-spacer />
         <lui-navigation-bar title='Title' level='2' menu-style='plain'>
           <lui-navigation-back slot='left' />
-          <span slot='right' onClick={handleOpenExternalWindowButton}>
+          <a href="#" slot='right' onClick={handleOpenExternalWindowButton}>
             <i class='lar la-arrow-out-square'></i>
-          </span>
-          <span slot='right' onClick={handleCloseLIFFAppButton}>
+          </a>
+          <a href="#" slot='right' onClick={handleCloseLIFFAppButton}>
             <i class='lar la-times'></i>
-          </span>
+          </a>
         </lui-navigation-bar>
         <ul>
           <li>
