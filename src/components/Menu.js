@@ -1,9 +1,24 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import Fab from '@material-ui/core/Fab';
+import { makeStyles } from '@material-ui/core/styles';
+import CloseIcon from '@material-ui/icons/CloseOutlined';
+
+
 
 const liff = window.liff;
 
+const useStyles = makeStyles({
+  root: {
+    top: '44px',
+  },
+  contextBtn: {
+    right: '90px',
+  },
+});
+
 const Menu = () => {
+  const classes = useStyles();
 
   const activeStyle = {
     color: "green",
@@ -31,16 +46,13 @@ const Menu = () => {
   };
   return (
     <Fragment>
-      <div>
-        <lui-navigation-bar-spacer />
-        <lui-navigation-bar title='Title' level='2' menu-style='plain'>
+      <div className={classes.root}>
+        <lui-navigation-bar-spacer></lui-navigation-bar-spacer>
+        <lui-navigation-bar title='Title' level='3' menu-style='light'>
           <lui-navigation-back slot='left' />
-          <a href="#" slot='right' onClick={handleOpenExternalWindowButton}>
-            <i class='lar la-arrow-out-square'></i>
-          </a>
-          <a href="#" slot='right' onClick={handleCloseLIFFAppButton}>
-            <i class='lar la-times'></i>
-          </a>
+          <Fab color="primary" aria-label="Close" onClick={handleOpenExternalWindowButton} slot="right" size="small" className={classes.contextBtn}>
+            <CloseIcon />
+          </Fab>
         </lui-navigation-bar>
         <ul>
           <li>
