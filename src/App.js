@@ -8,38 +8,38 @@ const liff = window.liff;
 const App = () => {
 
   
-  React.useEffect(() => {
-    initializeLiff();
-  }, []);
+  // React.useEffect(() => {
+  //   initializeLiff();
+  // }, []);
 
-  const initializeLiff = () => {
-    liff
-      .init({
-        liffId: process.env.REACT_APP_LIFF_ID,
-      })
-      .then(() => {
-        initializeApp();
-      })
-      .catch((err) => {
-        alert(err);
-      });
-  };
+  // const initializeLiff = () => {
+  //   liff
+  //     .init({
+  //       liffId: process.env.REACT_APP_LIFF_ID,
+  //     })
+  //     .then(() => {
+  //       initializeApp();
+  //     })
+  //     .catch((err) => {
+  //       alert(err);
+  //     });
+  // };
 
-  const initializeApp = () => {
-    displayIsInClientInfo();
-  };
+  // const initializeApp = () => {
+  //   displayIsInClientInfo();
+  // };
 
 
-  const displayIsInClientInfo = () => {
-    if (liff.isInClient()) {
-      window.alert("You are opening the app in the in-app browser of LINE.");
-    } else {
-      window.alert("You are opening the app in an external browser.");
-    }
-  };
+  // const displayIsInClientInfo = () => {
+  //   if (liff.isInClient()) {
+  //     window.alert("You are opening the app in the in-app browser of LINE.");
+  //   } else {
+  //     window.alert("You are opening the app in an external browser.");
+  //   }
+  // };
 
   return (
-    <Fragment>
+    <div>
       <Menu />
       <Route exact path='/home' component={Home} />
       <Switch>
@@ -47,7 +47,7 @@ const App = () => {
         <Route path='/about' component={About} />
       </Switch>
       <Route path='/posts' component={Posts} />
-    </Fragment>
+    </div>
   );
 };
 

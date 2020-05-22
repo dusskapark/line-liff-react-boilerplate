@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import Fab from '@material-ui/core/Fab';
 import { makeStyles } from '@material-ui/core/styles';
-import CloseIcon from '@material-ui/icons/CloseOutlined';
+import AddIcon from '@material-ui/icons/AddOutlined';
 
 
 
@@ -10,9 +10,10 @@ const liff = window.liff;
 
 const useStyles = makeStyles({
   root: {
-    top: '44px',
+    marginTop: '44px',
   },
   contextBtn: {
+    top: '44px',
     right: '90px',
   },
 });
@@ -24,20 +25,13 @@ const Menu = () => {
     color: "green",
     fontSize: "2rem",
   };
-  const handleCloseLIFFAppButton = () => {
-    if (!liff.isInClient()) {
-      sendAlertIfNotInClient();
-    } else {
-      liff.closeWindow();
-    }
-  };
-
-  const handleOpenExternalWindowButton = () => {
-    liff.openWindow({
-      url: "https://line.me",
-      external: true,
-    });
-  };
+  // const handleCloseLIFFAppButton = () => {
+  //   if (!liff.isInClient()) {
+  //     sendAlertIfNotInClient();
+  //   } else {
+  //     liff.closeWindow();
+  //   }
+  // };
 
   const sendAlertIfNotInClient = () => {
     alert(
@@ -46,12 +40,12 @@ const Menu = () => {
   };
   return (
     <Fragment>
-      <div className={classes.root}>
-        <lui-navigation-bar-spacer></lui-navigation-bar-spacer>
-        <lui-navigation-bar title='Title' level='3' menu-style='light'>
+      <div>
+      <lui-navigation-bar-spacer></lui-navigation-bar-spacer>
+        <lui-navigation-bar title='Title' level='2' menu-style='light' className={classes.root}>
           <lui-navigation-back slot='left' />
-          <Fab color="primary" aria-label="Close" onClick={handleOpenExternalWindowButton} slot="right" size="small" className={classes.contextBtn}>
-            <CloseIcon />
+          <Fab color="primary" aria-label="Close" onClick={sendAlertIfNotInClient} slot="right" size="small" className={classes.contextBtn}>
+            <AddIcon />
           </Fab>
         </lui-navigation-bar>
         <ul>
