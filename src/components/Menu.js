@@ -10,9 +10,7 @@ const liff = window.liff;
 
 const useStyles = makeStyles({
   root: {
-    marginTop: '44px',
-  },
-  contextBtn: {
+    position: 'absolute',
     top: '44px',
     right: '90px',
   },
@@ -41,10 +39,10 @@ const Menu = () => {
   return (
     <Fragment>
       <div>
-      <lui-navigation-bar-spacer></lui-navigation-bar-spacer>
-        <lui-navigation-bar title='Title' level='2' menu-style='light' className={classes.root}>
+      <lui-navigation-bar-spacer style="" />
+        <lui-navigation-bar title='Title' level='3' menu-style='light'>
           <lui-navigation-back slot='left' />
-          <Fab color="primary" aria-label="Close" onClick={sendAlertIfNotInClient} slot="right" size="small" className={classes.contextBtn}>
+          <Fab color="primary" aria-label="Close" onClick={sendAlertIfNotInClient} slot="right" size="small" className={classes.root}>
             <AddIcon />
           </Fab>
         </lui-navigation-bar>
