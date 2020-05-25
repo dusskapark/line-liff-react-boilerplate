@@ -11,7 +11,6 @@ const liff = window.liff;
 const useStyles = makeStyles({
   root: {
     position: 'absolute',
-    top: '44px',
     right: '90px',
   },
 });
@@ -39,7 +38,7 @@ const Menu = () => {
   return (
     <Fragment>
       <div>
-      <lui-navigation-bar-spacer/>
+      <lui-navigation-bar-spacer />
         <lui-navigation-bar title='Title' level='3' menu-style='light'>
           <lui-navigation-back slot='left' />
           <Fab color="primary" aria-label="Close" onClick={sendAlertIfNotInClient} slot="right" size="small" className={classes.root}>
