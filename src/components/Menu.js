@@ -1,22 +1,19 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import Fab from '@material-ui/core/Fab';
-import { makeStyles } from '@material-ui/core/styles';
-import AddIcon from '@material-ui/icons/AddOutlined';
 
 
 
 const liff = window.liff;
 
-const useStyles = makeStyles({
-  root: {
-    position: 'absolute',
-    right: '90px',
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     position: 'absolute',
+//     right: '90px',
+//   },
+// });
 
 const Menu = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const activeStyle = {
     color: "green",
@@ -41,9 +38,6 @@ const Menu = () => {
       <lui-navigation-bar-spacer />
         <lui-navigation-bar title='Title' level='3' menu-style='light'>
           <lui-navigation-back slot='left' />
-          <Fab color="primary" aria-label="Close" onClick={sendAlertIfNotInClient} slot="right" size="small" className={classes.root}>
-            <AddIcon />
-          </Fab>
         </lui-navigation-bar>
         <ul>
           <li>

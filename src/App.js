@@ -39,7 +39,7 @@ const App = () => {
   // };
 
   return (
-    <div>
+    <div id="root">
       <Menu />
       <Route exact path='/home' component={Home} />
       <Switch>
